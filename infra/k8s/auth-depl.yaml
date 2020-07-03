@@ -11,15 +11,15 @@ spec:
     metadata:
       labels:
         app: authentication
-      spec:
-        containers:
-          - name: authentication
-            image: dmarksteiner/hfeauthentication
+    spec:
+      containers:
+        - name: authentication
+          image: dmarksteiner/hfeauthentication
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: authentication-srv
+  name: auth-srv
 spec:
   selector:
     app: authentication
